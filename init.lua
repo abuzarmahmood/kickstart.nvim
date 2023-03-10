@@ -96,6 +96,12 @@ require('lazy').setup({
     dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
   },
 
+  {
+     'jpalardy/vim-slime', config = function()
+        vim.g.slime_target = 'tmux'
+    end
+  },
+
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim', opts = {} },
   { -- Adds git releated signs to the gutter, as well as utilities for managing changes
@@ -186,7 +192,7 @@ require('lazy').setup({
   --
   --    An additional note is that if you only copied in the `init.lua`, you can just comment this line
   --    to get rid of the warning telling you that there are not plugins in `lua/custom/plugins/`.
-  { import = 'custom.plugins' },
+  -- { import = 'custom.plugins' },
 }, {})
 
 -- [[ Setting options ]]
